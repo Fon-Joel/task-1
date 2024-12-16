@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <form action="/submit" method="post" target="_blank" enctype="multipart/form-data" onsubmit="submitForm(event)">
+                <h2 class="text-center">Registration Form</h2>
+                <div class="row">
+                    <div>
+                        <!-- Full Name -->
+                        <div class="form-group">
+                            <label class="form-label"for="fullname">Full Name:</label>
+                            <input type="text" class="form-control" id="fullname" name="fullname" required>
+                        </div>
+            
+                        <!-- Email Address -->
+                        <div class="form-group">
+                            <label class="form-label"for="email">Email Address:</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+            
+                        <!-- Password -->
+                        <div class="form-group">
+                            <label class="form-label"for="password">Password:</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+            
+                        <!-- Confirm Password -->
+                        <div class="form-group">
+                            <label class="form-label"for="confirm_password">Confirm Password:</label>
+                            <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
+                        </div>
+                    </div>
+                    <div>
+                            <!-- Gender -->
+                        <div class="form-group">
+                            <label>Gender:</label><br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="male" name="gender" value="Male">
+                                <label class="form-label"class="form-check-label" for="male">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="female" name="gender" value="Female">
+                                <label class="form-label"class="form-check-label" for="female">Female</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="other" name="gender" value="Other">
+                                <label class="form-label"class="form-check-label" for="other">Other</label>
+                            </div>
+                        </div>
+            
+                        <!-- Date of Birth -->
+                        <div class="form-group">
+                            <label class="form-label"for="dob">Date of Birth:</label>
+                            <input type="date" class="form-control" id="dob" name="dob">
+                        </div>
+            
+                        <!-- Profile Picture -->
+                        <div class="form-group">
+                            <label class="form-label"for="profile_picture">Profile Picture:</label>
+                            <input type="file" class="form-control-file" id="profile_picture" name="profile_picture" accept="image/*">
+                        </div>                            
+                    </div>
+                </div>
+                
+                <p id="error"></p>
+                <div class="submit-div">                    
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</body>
+</html>
